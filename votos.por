@@ -1,48 +1,79 @@
 programa
 {
-	
+	inclua biblioteca matematica --> mat
 	funcao inicio()
 	{
-		inteiro candidato1=0, candidato2=0, candidato3=0 
-		inteiro numerocandidato=0, votonulo=0, votobranco=0, encerravotacao, percentualvotos
-		escreva("Digite o numero do Candidato: ")
-		leia(numeroCandidato)
-
+		cadeia candidato1="Ana"
+		cadeia candidato2="Benjamin"
+		cadeia candidato3="Mari"
+		inteiro voto
+		real contagemVotoBranco=0.0
+		real contagemVotoNulo=0.0
+		real contagemAna=0.0
+		real contagemBenjamin=0.0
+		real contagemMari=0.0
+		inteiro encerraVotacao
+		real percentualVotos
+		real soma= contagemVotoBranco + contagemVotoNulo + contagemAna + contagemBenjamin + contagemMari
+		real porcentagemCandidato1=0.0, porcentagemCandidato2=0.0, porcentagemCandidato3=0.0, porcentagemBranco=0.0, porcentagemNulo=0.0
 		
-           enquanto(voto!=0){
-	     escolha(numeroCandidato){
-	     	
-	     	
-            caso 1:
-                  candidato1++
-                  escreva("candidato 1 recebeu um voto")
-                  pare
-            caso 2:
-                  candidato2++
-                  escreva("candidato 2 recebeu um voto")
-                  pare
-            caso 3:
-                  candidato3++
-                  escreva("candidato 3 recebeu um voto")
-                  pare
-            caso 9:
-                  votonulo++
-                  escreva("voto nulo")
-                  pare
-            caso 6:
-                  votobranco++
-                  escreva("voto branco")
-                  pare
-            caso 0:
-                  escreva("encerrar votação")      
-            
-            caso contrario:
-                  escreva("nemhum candidato foi votado")
+		
+	
+	     faca{
+	     	escreva("Digite o numero do Candidato: ")
+		leia(voto)
+	
+		     escolha(voto){
+		     	
+		     	
+	            caso 1:
+	                  contagemAna++
+	                  soma++
+	                  escreva(candidato1,"recebeu 1 voto/n")
+	                  pare
+	            caso 2:
+	                  contagemBenjamin++
+	                  soma++
+	                  escreva(candidato2,"recebeu 1 voto/n")
+	                  pare
+	            caso 3:
+	                  contagemMari++
+	                  soma++
+	                  escreva(candidato3,"recebeu 1 voto/n")
+	                  pare
+	            caso 6:
+	                  contagemVotoBranco++
+	                  soma++
+	                  escreva("voto branco/n")
+	                  pare
+	            caso 9:
+	                  contagemVotoNulo++
+	                  soma++
+	                  escreva("voto nulo/n")
+	                  pare
+	            caso 0:
+	                  escreva("encerrar votação/n")      
+	            
+	            caso contrario:
+	                  escreva("nemhum candidato foi votado/n")
+	                  pare
+	                  
+		     } } enquanto(voto!=0)
+		     
+		    
+	     escreva(" Encerrada as Eleições! Aguarde contagem dos votos./n")
 
-            
-	     }
+	     porcentagemCandidato1 = (contagemAna/soma) *100
+	     porcentagemCandidato2= (contagemBenjamin/soma) *100
+	     porcentagemCandidato3= (contagemMari/soma) * 100
+	     porcentagemBranco = (contagemVotoBranco/soma) * 100
+	     porcentagemNulo = (contagemVotoNulo/soma) * 100 
+	     escreva(" a porcentagem do candidato Ana foi ", porcentagemCandidato1)
+	     escreva(" a porcentagem do candidato Benjamin foi", porcentagemCandidato2)
+	     escreva(" A porcentagem do candidato Mari foi",porcentagemCandidato3)
 	}
-}
+
+	}
        
 	
 /* $$$ Portugol Studio $$$ 
@@ -50,7 +81,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1111; 
+ * @POSICAO-CURSOR = 48; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
