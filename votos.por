@@ -9,16 +9,16 @@ programa
 		leia(numeroCandidato)
 
 		
-
+           enquanto(voto!=0){
 	     escolha(numeroCandidato){
 	     	
 	     	
             caso 1:
-                  candidato++
+                  candidato1++
                   escreva("candidato 1 recebeu um voto")
                   pare
             caso 2:
-                  candidato++
+                  candidato2++
                   escreva("candidato 2 recebeu um voto")
                   pare
             caso 3:
@@ -39,7 +39,6 @@ programa
             caso contrario:
                   escreva("nemhum candidato foi votado")
 
-            enquanto(
             
 	     }
 	}
@@ -51,7 +50,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 176; 
+ * @POSICAO-CURSOR = 1111; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
